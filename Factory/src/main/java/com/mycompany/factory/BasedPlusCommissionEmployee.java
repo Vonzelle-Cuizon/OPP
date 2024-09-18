@@ -23,6 +23,12 @@ public class BasedPlusCommissionEmployee {
 
     public BasedPlusCommissionEmployee() {
     }
+    
+     public BasedPlusCommissionEmployee(String empName, int empID) {
+        this.empName = empName;
+        this.empID = empID;
+    }
+    
 
     public double getTotalSales() {
         return totalSales;
@@ -65,10 +71,13 @@ public class BasedPlusCommissionEmployee {
         return temp + this.baseSalary;
     }
     
-    public void displayHourly(){
+    public void displayBased(){
         System.out.println("Employee ID: " + this.empID);
         System.out.println("Employee Name: " + this.empName);
+        System.out.println("Employee Sales: " + this.totalSales);
+        System.out.println("Employee Base Salary: " + this.baseSalary);
         System.out.println("Employee Salary: " + computeSalary());
+        
     }
 
     @Override
