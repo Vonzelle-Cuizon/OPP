@@ -24,6 +24,11 @@ public class PieceWorkerEmployee {
     public PieceWorkerEmployee() {
  
     }
+    
+    public PieceWorkerEmployee(String empName, int empID) {
+        this.empName = empName;
+        this.empID = empID;
+    }
 
     public int getTotalPiecesFinished() {
         return totalPiecesFinished;
@@ -70,10 +75,13 @@ public class PieceWorkerEmployee {
         return temp;
     }
     
-    public void displayHourly(){
+    public void displayPiece(){
         System.out.println("Employee ID: " + this.empID);
         System.out.println("Employee Name: " + this.empName);
+        System.out.println("Employee Pieced finished: " + this.totalPiecesFinished);
+        System.out.println("Employee ratee: " + this.ratePerPiece);
         System.out.println("Employee Salary: " + computeSalary());
+        
     }
 
     @Override
