@@ -21,6 +21,11 @@ public class CommissionEmployee {
     
     public CommissionEmployee() {
     }
+    
+    public CommissionEmployee(String empName, int empID) {
+        this.empName = empName;
+        this.empID = empID;
+    }
 
     public double getTotalSales() {
         return totalSales;
@@ -55,9 +60,10 @@ public class CommissionEmployee {
         return temp;
     }
     
-    public void displayHourly(){
+    public void displayComm(){
         System.out.println("Employee ID: " + this.empID);
         System.out.println("Employee Name: " + this.empName);
+        System.out.println("Employee Sales: " + this.totalSales);
         System.out.println("Employee Salary: " + computeSalary());
     }
 
