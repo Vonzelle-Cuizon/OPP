@@ -25,6 +25,11 @@ public class HourlyEmployee {
         
     }
     
+    public HourlyEmployee(String empName, int empID) {
+        this.empName = empName;
+        this.empID = empID;
+    }
+    
     public float getTotalHoursWorked() {
         return TotalHoursWorked;
     }
@@ -74,6 +79,8 @@ public class HourlyEmployee {
     public void displayHourly(){
         System.out.println("Employee ID: " + this.empID);
         System.out.println("Employee Name: " + this.empName);
+        System.out.println("Employee Hours: " + this.TotalHoursWorked);
+        System.out.println("Employee Rate: " + this.ratePerHour);
         System.out.println("Employee Salary: " + computeSalary());
     }
 
