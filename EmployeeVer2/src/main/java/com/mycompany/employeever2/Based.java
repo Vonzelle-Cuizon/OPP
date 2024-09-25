@@ -8,45 +8,31 @@ package com.mycompany.employeever2;
  *
  * @author User
  */
-public class Based extends Employee{
-    public double totalSales;
+public class Based extends Comm{
     public double baseSalary;
 
     public Based(double totalSales, double baseSalary, String Name, int empID) {
-        super(Name, empID);
+        super(totalSales,Name, empID);
         this.totalSales = totalSales;
         this.baseSalary = baseSalary;
     }
 
     public Based(double totalSales, double baseSalary, String Name) {
-        super(Name);
-        this.totalSales = totalSales;
+        super(totalSales,Name);
         this.baseSalary = baseSalary;
     }
 
     public Based(double totalSales, double baseSalary, int empID) {
-        super(empID);
-        this.totalSales = totalSales;
+        super(totalSales,empID);
         this.baseSalary = baseSalary;
     }
 
     public Based(double totalSales, double baseSalary) {
-        this.totalSales = totalSales;
+        super(totalSales);
         this.baseSalary = baseSalary;
     }
     
     public Based() {
-    }
-
-    
-    
-    
-    public double getTotalSales() {
-        return totalSales;
-    }
-
-    public void setTotalSales(double totalSales) {
-        this.totalSales = totalSales;
     }
 
     public double getBaseSalary() {
@@ -55,22 +41,6 @@ public class Based extends Employee{
 
     public void setBaseSalary(double baseSalary) {
         this.baseSalary = baseSalary;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    public int getEmpID() {
-        return empID;
-    }
-
-    public void setEmpID(int empID) {
-        this.empID = empID;
     }
     
     public double computeSalary(){
