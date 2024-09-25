@@ -83,8 +83,12 @@ public class Based extends Employee{
         return this.baseSalary + this.baseSalary * rateof;
     }
     
+    void display(){
+        System.out.printf("Name: %s\nEMP ID: %d\n Salary: %.2f\n",super.Name,super.empID,computeSalary());
+    }
+    
     @Override
     public String toString() {
-        return ("Name " + super.Name + "\nEMP ID " + super.empID + "\nSalary " + computeSalary());
+        return ("Name " + super.Name + "\nEMP ID " + super.empID);
     }
 }
