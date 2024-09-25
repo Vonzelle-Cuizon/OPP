@@ -82,9 +82,13 @@ public class Piece extends Employee{
         return this.ratePerPiece * this.totalPiecesFinished + ((this.ratePerPiece * this.totalPiecesFinished)/100*this.ratePerPiece*10);
     }
     
+    void display(){
+        System.out.printf("Name: %s\nEMP ID: %d\n Salary: %.2f\n",super.Name,super.empID,computeSalary());
+    }
+    
     @Override
     public String toString() {
-        return ("Name " + super.Name + "\nEMP ID " + super.empID + "\nSalary " + computeSalary());
+        return ("Name " + super.Name + "\nEMP ID " + super.empID);
     }
     
 }
