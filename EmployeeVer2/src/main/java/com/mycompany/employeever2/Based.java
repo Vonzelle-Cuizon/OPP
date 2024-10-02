@@ -50,11 +50,12 @@ public class Based extends Comm{
         else if(this.totalSales>=10000 && this.totalSales<100000)rateof = 0.1;
         else if(this.totalSales>=100000 && this.totalSales<1000000)rateof = 0.2;
         
-        return this.baseSalary + this.baseSalary * rateof;
+        return this.baseSalary + this.totalSales * rateof;
     }
     
-    void display(){
-        System.out.printf("Name: %s\nEMP ID: %d\n Salary: %.2f\n",super.Name,super.empID,computeSalary());
+    public void display(){
+        System.out.println(this);
+        System.out.printf("Salary: %.2f\n",computeSalary());
     }
     
     @Override
