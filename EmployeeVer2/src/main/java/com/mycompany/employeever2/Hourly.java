@@ -76,8 +76,9 @@ public class Hourly extends Employee{
     }
     
    
-    void display(){
-        System.out.printf("Name: %s\nEMP ID: %d\n Salary: %.2f\n",super.Name,super.empID,computeSalary());
+    public void display(){
+        System.out.println(this);
+        System.out.printf("Salary: %.2f\n",computeSalary());
     }
     
     @Override
