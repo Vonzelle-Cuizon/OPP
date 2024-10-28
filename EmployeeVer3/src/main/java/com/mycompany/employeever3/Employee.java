@@ -18,9 +18,19 @@ public class Employee {
         dateHired = new Date(dhDay,dhMonth,dhYear);
         this.empID = empID;
     }
+    
+    public Employee(String fname, String lname, int empID, int dhDay, int dhMonth, int dhYear) {
+        empName = new Name(fname,lname);
+        dateHired = new Date(dhDay,dhMonth,dhYear);
+        this.empID = empID;
+    }
 
     public Employee(String fname, String mname, String lname) {
         empName = new Name(fname,mname,lname);
+    }
+    
+    public Employee(String fname, String lname) {
+        empName = new Name(fname,lname);
     }
     
     public Employee(int dhDay, int dhMonth, int dhYear) {
@@ -35,7 +45,13 @@ public class Employee {
     }
 
     
-    
+    public Date getDateHired() {
+        return dateHired;
+    }
+
+    public void setDateHired(Date dateHired) {
+        this.dateHired = dateHired;
+    }
     
     public Name getEmpName() {
         return empName;
@@ -52,6 +68,18 @@ public class Employee {
     public void setEmpID(int empID) {
         this.empID = empID;
     }
+
+    void display(){
+        System.out.println(this);
+    }  
+    
+    @Override
+    public String toString() {
+        return "Employee Name: " + empName + "\nEmployee ID: " + empID + ",\nDate hired: " + dateHired;
+    }
+    
+    
+    
     
     
 }
