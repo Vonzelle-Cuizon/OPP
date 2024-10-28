@@ -18,6 +18,13 @@ public class Name {
         this.mname = mname;
         this.lname = lname;
     }
+
+    public Name(String fname, String lname) {
+        this.fname = fname;
+        this.lname = lname;
+    }
+
+    
     
     public Name() {   
     }
@@ -44,6 +51,11 @@ public class Name {
 
     public void setLname(String lname) {
         this.lname = lname;
+    }
+
+    @Override
+    public String toString() {
+        return (mname!=null)?this.fname + " " + this.mname.charAt(0) + " " +this.lname: this.fname + " " +this.lname;
     }
 
     
