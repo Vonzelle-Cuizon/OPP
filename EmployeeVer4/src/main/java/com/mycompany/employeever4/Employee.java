@@ -75,7 +75,7 @@ public class Employee {
     
     @Override
     public String toString() {
-        return "Employee Name: " + empName + "\nEmployee ID: " + empID + ",\nDate hired: " + dateHired;
+        return "\nEmployee Name: " + empName + "\nEmployee ID: " + empID + "\nDate hired: " + dateHired;
     }
     
     
